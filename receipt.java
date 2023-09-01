@@ -2,15 +2,14 @@ import java.util.Scanner;
 
 public class receipt {
     public static void main(String args[]) {
+        System.out.println("Welcome to Liver's Rat Food Store!"); // welcome message
+
+        int[][] order;
         boolean ordering = true;
         Scanner menuScan = new Scanner(System.in);
         Scanner keepOrderingScan = new Scanner(System.in);
-        int order[][];
         int orderingCounter = 0;
         String keepOrdering;
-        double price;
-
-        System.out.println("Welcome to Liver's Rat Food Store!"); // welcome message
 
         while (ordering == true) {
             System.out.println("Please select an item from the following menu by typing the number of the item.");
@@ -19,10 +18,10 @@ public class receipt {
             System.out.println("3. Rat-Fil-A Sandwich || $6.60");
             System.out.println("4. Rat Fries          || $8.80");
             System.out.println("5. Rat Tea            || $11.00");
-            order[i][0] = menuScan.nextInt();
+            order[orderingCounter][0] = menuScan.nextInt();
 
             System.out.println("How many would you like?");
-            order[i][1] = menuScan.nextInt();
+            order[orderingCounter][1] = menuScan.nextInt();
             
             System.out.println("Would you like to keep ordering? (y/n)");
             do {
@@ -37,11 +36,13 @@ public class receipt {
             orderingCounter++;
         } // phase 1: ordering
 
-        for (int b = 0; b <= orderingCounter; b++) {
-            price += order[b][1]*order[b][0]*(2.2);
+        double price = 0;
+
+        for (int i = 0; i <= orderingCounter; i++) {
+            price += order[i][1]*order[i][0]*(2.2);
         }
 
-        System.out.println("Thanks for shopping with Liver's Rat Food! Your total price is $")
+        System.out.println("Thanks for shopping with Liver's Rat Food! Your total price is $" + price); //phase 2: price charge
         
         
     }
