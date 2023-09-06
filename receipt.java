@@ -56,7 +56,7 @@ public class receipt {
             }
         }
         System.out.println("");
-        System.out.println("________________________________________");
+        System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("Total Price: $" + String.format("%.2f", price) + "");
         System.out.println("****************************************");
