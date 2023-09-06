@@ -4,7 +4,7 @@ public class receipt {
     public static void main(String args[]) {
         System.out.println("Welcome to Liver's Rat Food Store!"); // welcome message
 
-        int[][] order;
+        int[][] order = new int[1][];
         boolean ordering = true;
         Scanner menuScan = new Scanner(System.in);
         Scanner keepOrderingScan = new Scanner(System.in);
@@ -18,10 +18,10 @@ public class receipt {
             System.out.println("3. Rat-Fil-A Sandwich || $6.60");
             System.out.println("4. Rat Fries          || $8.80");
             System.out.println("5. Rat Tea            || $11.00");
-            order[orderingCounter][0] = menuScan.nextInt();
+            order[0][orderingCounter] = menuScan.nextInt();
 
             System.out.println("How many would you like?");
-            order[orderingCounter][1] = menuScan.nextInt();
+            order[1][orderingCounter] = menuScan.nextInt();
             
             System.out.println("Would you like to keep ordering? (y/n)");
             do {
@@ -39,7 +39,7 @@ public class receipt {
         double price = 0;
 
         for (int i = 0; i <= orderingCounter; i++) {
-            price += order[i][1]*order[i][0]*(2.2);
+            price += order[1][i]*order[0][i]*(2.2);
         }
 
         System.out.println("Thanks for shopping with Liver's Rat Food! Your total price is $" + price); //phase 2: price charge
