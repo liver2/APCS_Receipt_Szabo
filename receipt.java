@@ -44,15 +44,15 @@ public class receipt {
         
         for (int j = 0; j < orderingCounter; j++) {
             if (order[0][j] == 1) {
-                System.out.println("Rat Food Pellets x " + order[1][j] + " || $" + order[1][j]*order[0][j]*(2.2) + "0");
+                System.out.println("Rat Food Pellets x " + order[1][j] + "         || $" + order[1][j]*order[0][j]*(2.2) + "0");
             } else if (order[0][j] == 2) {
-                System.out.println("Rat Ice Cream x " + order[1][j] + " || $" + order[1][j]*order[0][j]*(2.2) + "0");
+                System.out.println("Rat Ice Cream x " + order[1][j] + "            || $" + order[1][j]*order[0][j]*(2.2) + "0");
             } else if (order[0][j] == 3) {
-                System.out.println("Rat-Fil-A Sandwich x " + order[1][j] + " || $" + order[1][j]*order[0][j]*(2.2) + "0");
+                System.out.println("Rat-Fil-A Sandwich x " + order[1][j] + "       || $" + order[1][j]*order[0][j]*(2.2) + "0");
             } else if (order[0][j] == 4) {
-                System.out.println("Rat Fries x " + order[1][j] + " || $" + order[1][j]*order[0][j]*(2.2) + "0");
+                System.out.println("Rat Fries x " + order[1][j] + "                || $" + order[1][j]*order[0][j]*(2.2) + "0");
             } else if (order[0][j] == 5) {
-                System.out.println("Rat Tea x " + order[1][j] + " || $" + order[1][j]*order[0][j]*(2.2) + "0");
+                System.out.println("Rat Tea x " + order[1][j] + "                  || $" + order[1][j]*order[0][j]*(2.2) + "0");
             }
         }
         System.out.println("");
